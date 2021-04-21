@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Test">
+    <listeners>
+        <listener class-name="com.globant.test.ListenerClass"></listener>
+    </listeners>
+    <parameter name="browser" value="Chrome"></parameter>
+    <parameter name="url" value="https://www.espn.com/?src=com_adblock=true"></parameter>
+    <parameter name="firstName" value="NameTest"></parameter>
+    <parameter name="lastName" value="MyLastName"></parameter>
+    <parameter name="email" value="TestemailFinal@gmail.com"></parameter>
+    <parameter name="newPassword" value="MyPass123*"></parameter>
+    <parameter name="userNameP" value="TestemailFinal@gmail.com"></parameter>
+    <parameter name="PassP" value="MyPass123*"></parameter>
+    <test name="Practice Tests Chrome">
+        <groups>
+            <run>
+                <include name="Final"></include>
+                <exclude name="itsnotest"></exclude>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.globant.test.GeneralTest"/>
+        </classes>
+    </test>
+</suite>
